@@ -1,6 +1,7 @@
 import ProfileCard from "@/components/card";
 import Selectitems from "@/components/select";
 import { doctors, specialties } from "@/lib/data";
+import Link from "next/link";
 
 
 
@@ -17,7 +18,7 @@ return(
   <div className="my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
         {
             doctors.map((data, ind) => (
-                <ProfileCard doctor={data} key={ind} />
+              <Link key={ind} href={`/doctors/${data.id}`}>  <ProfileCard doctor={data}  /></Link>
                 
             ))
         }

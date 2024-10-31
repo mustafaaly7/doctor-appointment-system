@@ -1,3 +1,4 @@
+import Avatarimg from "@/components/avatar";
 import ProfileCard from "@/components/card";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -27,7 +28,25 @@ export default function Home() {
   <div className="my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
         {
             doctors.slice(0,8).map((data, ind) => (
-                <ProfileCard doctor={data} key={ind} />
+              <div className="max-w-full w-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="flex justify-end px-4 pt-4">
+                  
+              </div>
+              <div className="flex flex-col items-center pb-10 gap-4">
+                  
+                  <Avatarimg/>
+                  <h1 className="mb-1 text-4xl font-medium text-gray-900 dark:text-white">
+                      {data.name}
+                  </h1>
+                  <span className="text-xl text-gray-500 dark:text-gray-400">
+                      {data.specialty}
+                  </span>
+                  <div className="flex mt-4 md:mt-6">
+                     <Button className="text-lg ">See More</Button>
+                  </div>
+              </div>
+          </div>
+
                 
             ))
         }
