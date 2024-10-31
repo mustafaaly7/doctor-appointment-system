@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import Selectitems from "@/components/select";
 import Select from "@/components/select";
 import { Button } from "@/components/ui/button";
+import { doctors } from "@/lib/doctors";
 import { specialties } from "@/lib/specialities";
 
 export default function Home() {
@@ -19,8 +20,12 @@ export default function Home() {
 <h1 className="text-3xl font-bold">Find Doctor by Speciality.</h1>
 <Selectitems items={specialties}/>
 </div>
+{
+  doctors.map((data,ind)=>(
 
-<ProfileCard/>
+     <ProfileCard doctor={data} key={ind}/> 
+  ))
+}
 
     </div>
   );

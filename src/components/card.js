@@ -1,12 +1,12 @@
 import Avatarimg from "./avatar";
 
 
-export default function ProfileCard() {
+export default function ProfileCard({doctor}) {
     return (
         <>
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div className="flex justify-end px-4 pt-4">
-                    <button
+                    {/* <button
                         id="dropdownButton"
                         data-dropdown-toggle="dropdown"
                         className="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
@@ -22,9 +22,9 @@ export default function ProfileCard() {
                         >
                             <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
                         </svg>
-                    </button>
+                    </button> */}
                     {/* Dropdown menu */}
-                    <div
+                    {/* <div
                         id="dropdown"
                         className="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                     >
@@ -54,7 +54,7 @@ export default function ProfileCard() {
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="flex flex-col items-center pb-10">
                     {/* <img
@@ -64,10 +64,10 @@ export default function ProfileCard() {
                     /> */}
                     <Avatarimg/>
                     <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-                        Bonnie Green
+                        {doctor.name}
                     </h5>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                        Visual Designer
+                        {doctor.specialty}
                     </span>
                     <div className="flex mt-4 md:mt-6">
                         <a
