@@ -42,5 +42,9 @@ export const doctors = [
   { id: 23, name: "Dr. Garcia", specialty: "Gynecology", fees: "$200", hospital: "NeuroHealth Institute", timing: "8:30 AM - 10:30 AM", gender: "Female" },
   { id: 24, name: "Dr. Jackson", specialty: "Gastroenterology", fees: "$190", hospital: "Gastro Center", timing: "7:10 AM - 9:10 AM", gender: "Male" }
 ];
-
+export const activeUser = {
+  isLogin: true,
+  email: "mustafa@gmail.com",
+  fullName: "Muhammad Mustafa Ali"
+}
 

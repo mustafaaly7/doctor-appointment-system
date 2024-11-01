@@ -1,3 +1,7 @@
+import { activeUser } from "@/lib/data";
+import MenubarHeader from "./menubar";
+import { Menubar } from "./ui/menubar";
+
 export default function Header() {
 
 
@@ -65,9 +69,13 @@ export default function Header() {
           <a href="#">Support</a>
         </li>
         <li className="md:mr-12">
-          <button className="rounded-full border-2 border-blue-900 px-6 py-1 text-blue-900 transition-colors hover:bg-blue-900 hover:text-white">
+          {activeUser ? <MenubarHeader />:
+          
+          
+           <button className="rounded-full border-2 border-blue-900 px-6 py-1 text-blue-900 transition-colors hover:bg-blue-900 hover:text-white">
             Login
           </button>
+          }
         </li>
       </ul>
     </nav>
