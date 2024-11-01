@@ -15,9 +15,10 @@ export const specialties = [
   "Ophthalmology",
   "Anesthesiology"
 ];
+
 export const doctors = [
   { id: 1, name: "Dr. Smith", specialty: "Cardiology", fees: "$150", hospital: "City Hospital", timing: "6:00 AM - 8:00 AM", gender: "Male" },
-  { id: 2, name: "Dr. Johnson", specialty: "Dermatology", fees: "$120", hospital: "Greenwood Clinic", timing: "7:00 AM - 9:00 AM", gender: "Female" },
+  { id: 2, name: "Dr. Johnson", specialty: "Dermatology", fees: "$120", hospital: "Greenwood Clinic", timing: "7:00 AM - 9:00 AM", gender: "Male" },
   { id: 3, name: "Dr. Williams", specialty: "Pediatrics", fees: "$100", hospital: "Children's Hospital", timing: "6:30 AM - 8:30 AM", gender: "Male" },
   { id: 4, name: "Dr. Brown", specialty: "Orthopedics", fees: "$180", hospital: "OrthoCare Center", timing: "8:00 AM - 10:00 AM", gender: "Male" },
   { id: 5, name: "Dr. Garcia", specialty: "Neurology", fees: "$200", hospital: "NeuroHealth Institute", timing: "8:30 AM - 10:30 AM", gender: "Female" },
