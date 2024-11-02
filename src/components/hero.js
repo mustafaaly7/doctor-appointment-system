@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 
 export default function Hero() {
@@ -25,6 +26,7 @@ export default function Hero() {
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     </p>
                                     <div className="mt-8 flex flex-col items-center justify-center sm:flex-row sm:space-x-4 lg:justify-start">
+                                        <Link href={"/doctors"}>
                                         <Button className="relative mt-4 rounded-lg border-2  px-6 py-2 font-medium text-white transition hover:translate-y-1 text-lg" >
 
                                             <div className="-scale-x-100 absolute left-0 -bottom-10 hidden h-10 w-10 -rotate-12 text-purple-600 md:inline-flex">
@@ -47,8 +49,10 @@ export default function Hero() {
                                                     />
                                                 </svg>
                                             </div>
-                                            Try for free
+                                            Find the Best  Doctors
                                         </Button>
+                                        </Link>
+                                        <Link href={'/doctors/apply'}>
                                         <Button className="mt-4 flex items-center rounded-lg  px-6 py-2 font-medium transition hover:translate-y-1 text-lg "
                                             variant="outline">
 
@@ -65,8 +69,9 @@ export default function Hero() {
                                                     clipRule="evenodd"
                                                 />
                                             </svg>
-                                            Watch the demo
+                                            Apply as a Doctor
                                         </Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
