@@ -1,9 +1,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-export default function Avatarimg(){
+export default function Avatarimg({src = "https://github.com/shadcn.png"}){
     return(
 
 <Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarImage src={src} />
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>
     )
