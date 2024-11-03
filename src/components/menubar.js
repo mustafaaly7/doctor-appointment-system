@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/menubar"
 import { auth, signOut } from "../../auth"
 import Image from "next/image"
+import { Avatar } from "./ui/avatar"
 
 export default async function MenubarHeader() {
   const session = await auth()
@@ -18,12 +19,13 @@ export default async function MenubarHeader() {
     <Menubar>
       <MenubarMenu>
         <MenubarTrigger>
-          <Image
+          {/* <Image
             className="border-none rounded"
             height={160}
             width={30}
             src={session?.user?.image}
-          />
+          /> */}
+          <Avatar />
         </MenubarTrigger>
         <MenubarContent>
           <MenubarItem>My Profile</MenubarItem>
