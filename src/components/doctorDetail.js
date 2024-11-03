@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "./ui/button";
 
 
@@ -10,9 +11,11 @@ export default function Doctordetail({ doctor }) {
                     <div className="flex flex-wrap -mx-4">
                         {/* Product Images */}
                         <div className="w-full md:w-1/2 px-4 mb-8">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1584467735815-f778f274e296?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9jdG9yfGVufDB8fDB8fHww"
                                 alt="Doctor"
+                                width={400}
+                                height={700}
                                 className="w-full h-2/3 rounded-lg shadow-md mb-4"
                                 id="mainImage"
                             />
@@ -23,7 +26,7 @@ export default function Doctordetail({ doctor }) {
                             <h2 className="text-3xl font-bold mb-2">{doctor.name}</h2>
                             <p className="text-gray-600 mb-4">{doctor.specialty}</p>
                             <div className="mb-4">
-                            <span className="text-2xl font-bold mr-2">Fees : </span>
+                                <span className="text-2xl font-bold mr-2">Fees : </span>
 
                                 <span className="text-2xl font-bold mr-2">{doctor.fees}</span>
                                 {/* <span className="text-gray-500 line-through">$399.99</span> */}
@@ -94,29 +97,29 @@ export default function Doctordetail({ doctor }) {
                             <p className="text-gray-700 mb-6 font-semibold">
                                 "Dedicated to advancing patient care through continuous learning and innovation, committed to fostering a healthier future for all."
                             </p>
-                           <div className="flex gap-5 mb-4">
-<h1 className="text-lg ">Hospital : </h1>
-<h1 className="text-lg ">{doctor.hospital}</h1>
+                            <div className="flex gap-5 mb-4">
+                                <h1 className="text-lg ">Hospital : </h1>
+                                <h1 className="text-lg ">{doctor.hospital}</h1>
 
 
-                           </div>
-                           <div className="flex gap-5 mb-4">
-<h1 className="text-lg ">Timing : </h1>
-<h1 className="text-lg ">{doctor.timing}</h1>
+                            </div>
+                            <div className="flex gap-5 mb-4">
+                                <h1 className="text-lg ">Timing : </h1>
+                                <h1 className="text-lg ">{doctor.timing}</h1>
 
 
-                           </div>
-                           <div className="flex gap-5 mb-4">
-<h1 className="text-lg ">Gender : </h1>
-<h1 className="text-lg ">{doctor.gender}</h1>
+                            </div>
+                            <div className="flex gap-5 mb-4">
+                                <h1 className="text-lg ">Gender : </h1>
+                                <h1 className="text-lg ">{doctor.gender}</h1>
 
 
-                           </div>
+                            </div>
 
 
                             <div className="flex space-x-4 mb-6">
-                               <Button className="w-full text-lg">Set An Appointment</Button>
-                               
+                                <Button className="w-full text-lg">Set An Appointment</Button>
+
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2">Key Features:</h3>
