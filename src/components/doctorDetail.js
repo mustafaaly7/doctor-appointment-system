@@ -95,7 +95,7 @@ export default function Doctordetail({ doctor }) {
                                 <span className="ml-2 text-gray-600">4.5 (120 reviews)</span>
                             </div>
                             <p className="text-gray-700 mb-6 font-semibold">
-                                "Dedicated to advancing patient care through continuous learning and innovation, committed to fostering a healthier future for all."
+                                Dedicated to advancing patient care through continuous learning and innovation, committed to fostering a healthier future for all.
                             </p>
                             <div className="flex gap-5 mb-4">
                                 <h1 className="text-lg ">Hospital : </h1>
