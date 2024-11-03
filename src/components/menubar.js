@@ -22,7 +22,7 @@ export default async function MenubarHeader() {
             className="border-none rounded"
             height={160}
             width={30}
-            src={session.user.image}
+            src={session?.user?.image}
           />
         </MenubarTrigger>
         <MenubarContent>
