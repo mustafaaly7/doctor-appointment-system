@@ -11,6 +11,7 @@ import {
 import { auth, signOut } from "../../auth"
 import Image from "next/image"
 import { Avatar } from "./ui/avatar"
+import Link from "next/link"
 
 export default async function MenubarHeader() {
   const session = await auth()
@@ -30,7 +31,9 @@ export default async function MenubarHeader() {
         }
         </MenubarTrigger>
         <MenubarContent>
+          <Link href={"/profile"}>
           <MenubarItem>My Profile</MenubarItem>
+          </Link>
           <MenubarSeparator />
           <MenubarItem>
             My Appointments
