@@ -1,3 +1,4 @@
+import { ClockCircleOutlined, DollarOutlined, PlusOutlined } from "@ant-design/icons";
 import Avatarimg from "./avatar";
 import { Button } from "./ui/button";
 
@@ -20,20 +21,21 @@ export default function ProfileCard({ doctor }) {
                     </span>
                 </div>
                 
-                <div className="flex justify-around gap-24 ">
-                    <h1 className="text-lg">Fees</h1>
+                <div className="flex justify-around  items-center font-semibold my-2 ">
+
+                    <h1 className="text-lg"><DollarOutlined /> Fees</h1>
                     <h1 className="text-lg">{doctor.fees}</h1>
 
                 </div>
                 
 
-                <div className="flex justify-around ">
-                    <h1 className="text-lg">Timing :</h1>
+                <div className="flex justify-around items-center font-semibold my-2">
+                    <h1 className="text-lg"><ClockCircleOutlined /> Timing :</h1>
                     <h1 className="text-lg">{doctor.timing}</h1>
 
                 </div>
-                <div className="flex justify-around ">
-                    <h1 className="text-lg">Hospital :</h1>
+                <div className="flex justify-around items-center font-semibold my-2 ">
+                    <h1 className="text-lg"><PlusOutlined/> Hospital :</h1>
                     <h1 className="text-lg">{doctor.hospital}</h1>
 
                 </div>
