@@ -13,8 +13,8 @@ export default async function Header() {
     <div className="container" >
 
       <header className=" container relative flex max-w-screen-xl flex-col overflow-hidden px-4 py-4 text-blue-900 md:mx-auto md:flex-row md:items-center">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="flex cursor-pointer items-center whitespace-nowrap text-2xl font-black"
         >
           <span className="mr-2 text-4xl text-blue-500">
@@ -34,7 +34,7 @@ export default async function Header() {
             </svg>
           </span>
           MediMeet
-        </a>
+        </Link>
         <input type="checkbox" className="peer hidden" id="navbar-open" />
         <label
           className="absolute top-5 right-7 cursor-pointer md:hidden"

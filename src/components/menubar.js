@@ -19,13 +19,15 @@ export default async function MenubarHeader() {
     <Menubar>
       <MenubarMenu>
         <MenubarTrigger>
-          {/* <Image
-            className="border-none rounded"
-            height={160}
-            width={30}
-            src={session?.user?.image}
-          /> */}
+          {session? 
+          <Image
+          className="border-none rounded"
+          height={160}
+          width={30}
+          src={session?.user?.image}
+          />:
           <Avatar />
+        }
         </MenubarTrigger>
         <MenubarContent>
           <MenubarItem>My Profile</MenubarItem>

@@ -28,10 +28,13 @@ export default function Home() {
         <div className="my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
           {
             doctors.slice(0, 8).map((data, ind) => (
+
               <div className="max-w-full w-96 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={ind}>
                 <div className="flex justify-end px-4 pt-4">
 
+              
                 </div>
+                <Link href={`/doctors/${data.id}`}>
                 <div className="flex flex-col items-center pb-10 gap-4">
 
                   <Avatarimg />
@@ -45,6 +48,7 @@ export default function Home() {
                     <Button className="text-lg ">See More</Button>
                   </div>
                 </div>
+                </Link>
               </div>
 
 

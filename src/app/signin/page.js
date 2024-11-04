@@ -17,7 +17,7 @@ if(session){
         await signIn("google")
       }}
     >
-<Button variant="outline" className="text-3xl bg-green-400 px-24 py-12" type="submit">Continue With Google </Button>
+<Button variant="outline" className="text-3xl bg-green-400 px-14 py-12" type="submit">Continue With Google </Button>
       {/* <button type="submit">Signin with Google</button> */}
     </form>
 
