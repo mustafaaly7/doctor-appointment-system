@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { DatePickerDemo } from "./Appointmentdate";
 
 
 export default function Doctordetail({ doctor }) {
@@ -119,7 +120,7 @@ export default function Doctordetail({ doctor }) {
 
                             <div className="flex space-x-4 mb-6">
                                 <Button className="w-full text-lg">Set An Appointment</Button>
-
+                                <DatePickerDemo />
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2">Key Features:</h3>
