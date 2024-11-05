@@ -29,7 +29,7 @@ export async function GET(req) {
     return Response.json({
         error : "false",
         msg : "data fetched successfully",
-        userSearch,
+        users:userSearch,
     })
 }
 export async function PUT(req) { }
