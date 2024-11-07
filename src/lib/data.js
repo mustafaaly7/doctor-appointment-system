@@ -43,176 +43,176 @@ export const doctors = [
   { id: 24, name: "Dr. Jackson", specialty: "Gastroenterology", fees: "$190", hospital: "Gastro Center", timing: "7:10 AM - 9:10 AM", gender: "Male" }
 ];
 
-export const appointments =[
+export const  appointments = [
   {
-    "user": {
-      "name": "John Doe",
-      "email": "johndoe@example.com"
+    user: {
+      name: "John Doe",
+      email: "johndoe@example.com"
     },
-    "appointmentDate": "2024-11-12",
-    "appointmentTime": "6:30 AM",
-    "doctor": {
-      "name": "Dr. Smith",
-      "hospital": "City Hospital"
+    appointmentDate: "2024-11-12",
+    appointmentTime: "6:30 AM",
+    doctor: {
+      name: "Dr. Smith",
+      hospital: "City Hospital"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   },
   {
-    "user": {
-      "name": "Jane Smith",
-      "email": "janesmith@example.com"
+    user: {
+      name: "Jane Smith",
+      email: "janesmith@example.com"
     },
-    "appointmentDate": "2024-11-13",
-    "appointmentTime": "8:00 AM",
-    "doctor": {
-      "name": "Dr. Johnson",
-      "hospital": "Greenwood Clinic"
+    appointmentDate: "2024-11-13",
+    appointmentTime: "8:00 AM",
+    doctor: {
+      name: "Dr. Johnson",
+      hospital: "Greenwood Clinic"
     },
-    "status": "Pending"
+    status: "Pending"
   },
   {
-    "user": {
-      "name": "Emily Davis",
-      "email": "emilydavis@example.com"
+    user: {
+      name: "Emily Davis",
+      email: "emilydavis@example.com"
     },
-    "appointmentDate": "2024-11-14",
-    "appointmentTime": "7:30 AM",
-    "doctor": {
-      "name": "Dr. Williams",
-      "hospital": "Children's Hospital"
+    appointmentDate: "2024-11-14",
+    appointmentTime: "7:30 AM",
+    doctor: {
+      name: "Dr. Williams",
+      hospital: "Children's Hospital"
     },
-    "status": "Cancelled"
+    status: "Cancelled"
   },
   {
-    "user": {
-      "name": "Michael Brown",
-      "email": "michaelbrown@example.com"
+    user: {
+      name: "Michael Brown",
+      email: "michaelbrown@example.com"
     },
-    "appointmentDate": "2024-11-15",
-    "appointmentTime": "9:00 AM",
-    "doctor": {
-      "name": "Dr. Brown",
-      "hospital": "OrthoCare Center"
+    appointmentDate: "2024-11-15",
+    appointmentTime: "9:00 AM",
+    doctor: {
+      name: "Dr. Brown",
+      hospital: "OrthoCare Center"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   },
   {
-    "user": {
-      "name": "Sarah Green",
-      "email": "sarahgreen@example.com"
+    user: {
+      name: "Sarah Green",
+      email: "sarahgreen@example.com"
     },
-    "appointmentDate": "2024-11-16",
-    "appointmentTime": "8:30 AM",
-    "doctor": {
-      "name": "Dr. Garcia",
-      "hospital": "NeuroHealth Institute"
+    appointmentDate: "2024-11-16",
+    appointmentTime: "8:30 AM",
+    doctor: {
+      name: "Dr. Garcia",
+      hospital: "NeuroHealth Institute"
     },
-    "status": "Pending"
+    status: "Pending"
   },
   {
-    "user": {
-      "name": "David Lee",
-      "email": "davidlee@example.com"
+    user: {
+      name: "David Lee",
+      email: "davidlee@example.com"
     },
-    "appointmentDate": "2024-11-17",
-    "appointmentTime": "8:15 AM",
-    "doctor": {
-      "name": "Dr. Lee",
-      "hospital": "Mental Wellness Center"
+    appointmentDate: "2024-11-17",
+    appointmentTime: "8:15 AM",
+    doctor: {
+      name: "Dr. Lee",
+      hospital: "Mental Wellness Center"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   },
   {
-    "user": {
-      "name": "Sophia Miller",
-      "email": "sophiamiller@example.com"
+    user: {
+      name: "Sophia Miller",
+      email: "sophiamiller@example.com"
     },
-    "appointmentDate": "2024-11-18",
-    "appointmentTime": "7:45 AM",
-    "doctor": {
-      "name": "Dr. Jones",
-      "hospital": "Women's Health Center"
+    appointmentDate: "2024-11-18",
+    appointmentTime: "7:45 AM",
+    doctor: {
+      name: "Dr. Jones",
+      hospital: "Women's Health Center"
     },
-    "status": "Cancelled"
+    status: "Cancelled"
   },
   {
-    "user": {
-      "name": "William Taylor",
-      "email": "williamtaylor@example.com"
+    user: {
+      name: "William Taylor",
+      email: "williamtaylor@example.com"
     },
-    "appointmentDate": "2024-11-19",
-    "appointmentTime": "9:30 AM",
-    "doctor": {
-      "name": "Dr. Thomas",
-      "hospital": "Cancer Care Center"
+    appointmentDate: "2024-11-19",
+    appointmentTime: "9:30 AM",
+    doctor: {
+      name: "Dr. Thomas",
+      hospital: "Cancer Care Center"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   },
   {
-    "user": {
-      "name": "Olivia Wilson",
-      "email": "oliviawilson@example.com"
+    user: {
+      name: "Olivia Wilson",
+      email: "oliviawilson@example.com"
     },
-    "appointmentDate": "2024-11-20",
-    "appointmentTime": "8:00 AM",
-    "doctor": {
-      "name": "Dr. Wilson",
-      "hospital": "Gastro Center"
+    appointmentDate: "2024-11-20",
+    appointmentTime: "8:00 AM",
+    doctor: {
+      name: "Dr. Wilson",
+      hospital: "Gastro Center"
     },
-    "status": "Pending"
+    status: "Pending"
   },
   {
-    "user": {
-      "name": "James Clark",
-      "email": "jamesclark@example.com"
+    user: {
+      name: "James Clark",
+      email: "jamesclark@example.com"
     },
-    "appointmentDate": "2024-11-21",
-    "appointmentTime": "8:45 AM",
-    "doctor": {
-      "name": "Dr. Anderson",
-      "hospital": "Endocrine Clinic"
+    appointmentDate: "2024-11-21",
+    appointmentTime: "8:45 AM",
+    doctor: {
+      name: "Dr. Anderson",
+      hospital: "Endocrine Clinic"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   },
   {
-    "user": {
-      "name": "Lily Evans",
-      "email": "lilyevans@example.com"
+    user: {
+      name: "Lily Evans",
+      email: "lilyevans@example.com"
     },
-    "appointmentDate": "2024-11-22",
-    "appointmentTime": "7:30 AM",
-    "doctor": {
-      "name": "Dr. Martin",
-      "hospital": "Pulmonary Clinic"
+    appointmentDate: "2024-11-22",
+    appointmentTime: "7:30 AM",
+    doctor: {
+      name: "Dr. Martin",
+      hospital: "Pulmonary Clinic"
     },
-    "status": "Pending"
+    status: "Pending"
   },
   {
-    "user": {
-      "name": "Henry Scott",
-      "email": "henryscott@example.com"
+    user: {
+      name: "Henry Scott",
+      email: "henryscott@example.com"
     },
-    "appointmentDate": "2024-11-23",
-    "appointmentTime": "9:00 AM",
-    "doctor": {
-      "name": "Dr. Taylor",
-      "hospital": "Surgery Center"
+    appointmentDate: "2024-11-23",
+    appointmentTime: "9:00 AM",
+    doctor: {
+      name: "Dr. Taylor",
+      hospital: "Surgery Center"
     },
-    "status": "Cancelled"
+    status: "Cancelled"
   },
   {
-    "user": {
-      "name": "Isabella Harris",
-      "email": "isabellaharris@example.com"
+    user: {
+      name: "Isabella Harris",
+      email: "isabellaharris@example.com"
     },
-    "appointmentDate": "2024-11-24",
-    "appointmentTime": "8:00 AM",
-    "doctor": {
-      "name": "Dr. Jackson",
-      "hospital": "Rheumatology Institute"
+    appointmentDate: "2024-11-24",
+    appointmentTime: "8:00 AM",
+    doctor: {
+      name: "Dr. Jackson",
+      hospital: "Rheumatology Institute"
     },
-    "status": "Confirmed"
+    status: "Confirmed"
   }
-]
+];
 
 

@@ -35,9 +35,11 @@ export default async function MenubarHeader() {
           <MenubarItem>My Profile</MenubarItem>
           </Link>
           <MenubarSeparator />
+          <Link href={"/appointments"}>
           <MenubarItem>
             My Appointments
           </MenubarItem>
+          </Link>
           <MenubarSeparator />
 
           <form
