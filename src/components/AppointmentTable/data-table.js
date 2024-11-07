@@ -18,7 +18,7 @@ import {
 
 
 
-export function DataTable({
+export function AppointmentTable({
   columns,
   data,
 }) {
