@@ -16,6 +16,9 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea" // for bio field
+import ImgUpload from "./uploadImg"
+import { useToast } from "@/hooks/use-toast"
+import { Toast } from "./ui/toast"
 
 // Define the form schema
 const formSchema = z.object({
@@ -29,11 +32,12 @@ const formSchema = z.object({
   phone: z.string().min(10).max(15),
   fees: z.string().min(1),
   appointmentTime: z.string().min(1, "Choose an appointment time."),
-  profileImg: z.string().url().optional()
+  // profileImg: z.string().url().optional()
 })
 
 // Main ApplyForm component
-export function ApplyForm() {
+export function ApplyForm({session}) {
+  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,14 +51,21 @@ export function ApplyForm() {
       phone: "",
       fees: "",
       appointmentTime: "",
-      profileImg: ""
+      // profileImg: ""
     },
   })
 
   const onSubmit = (values) => {
     // Convert comma-separated days string to array before submission
     // values.days = values.days[0].split(',').map(day => day.trim());
-    console.log(values);
+    
+    toast({
+      title: "Sorry , Your application cannot be submitted.",
+      description: "HELLO",
+    });
+      
+      // form.reset()
+      console.log(values);
   }
 
   return (
@@ -214,7 +225,7 @@ export function ApplyForm() {
           />
 
           {/* Profile Image */}
-          <FormField
+          {/* <FormField
             control={form.control}
             name="profileImg"
             render={({ field }) => (
@@ -222,14 +233,17 @@ export function ApplyForm() {
                 <FormLabel className="text-lg font-medium text-gray-700">Profile Image URL</FormLabel>
                 <FormControl>
                   <Input placeholder="Image URL" {...field} className="text-base p-4" />
+                  <ImgUpload {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
-          />
+          /> */}
 
           {/* Submit Button */}
-          <Button type="submit" className="w-full text-lg py-3 mt-4">Submit</Button>
+          <Button type="submit" className="w-full text-lg py-3 mt-4">
+            {form.formState.isSubmitting ? "Loading" : "Submit"}
+            </Button>
         </form>
       </Form>
     </div>
