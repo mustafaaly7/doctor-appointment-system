@@ -1,3 +1,4 @@
+import { ApplyForm } from "@/components/applyForm";
 
 
 export default function ApplyasDoc(){
@@ -9,6 +10,8 @@ return(
 <h1>APPLY</h1>
 
 
+
+<ApplyForm />
 </div>
 
 
