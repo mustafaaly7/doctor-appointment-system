@@ -35,8 +35,21 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           picture: profile.picture,
         }
         const user = await RegisterUser(obj)
-        return user // Do different verification for other providers that don't have `email_verified`
+        return {user} // Do different verification for other providers that don't have `email_verified`
       }
+    },
+    async jwt({ token }) {
+      const user = await  RegisterUser({email : token.email} )
+// console.log("user in jwt => ", user);
+
+        token._id = user._id
+        token.role = user.role
+      return token
+    },
+    session({ session, token }) {
+      session.user._id = token._id
+      session.user.role = token.role
+      return session
     },
   }
 
