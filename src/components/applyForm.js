@@ -19,9 +19,7 @@ import { Textarea } from "@/components/ui/textarea" // for bio field
 
 // Define the form schema
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Username must be at least 2 characters." }).max(50),
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(150),
-  email: z.string().email({ message: "Enter a valid email address." }).max(50),
   // days: z.array(z.string()).min(1, "Select at least one day."),
   location: z.string().min(2).max(50),
   hospital: z.string().min(2).max(50),
@@ -37,9 +35,7 @@ export function ApplyForm({session}) {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
       bio: "",
-      email: "",
       // days: [],
       location: "",
       hospital: "",
@@ -52,8 +48,7 @@ export function ApplyForm({session}) {
   })
 
   const onSubmit = (values) => {
-    // Convert comma-separated days string to array before submission
-    // values.days = values.days[0].split(',').map(day => day.trim());
+    values.user=session.user._id
     
     
       
@@ -66,20 +61,7 @@ export function ApplyForm({session}) {
       <h2 className="text-3xl font-semibold mb-8 text-center text-gray-800">Apply Form</h2>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          {/* Name */}
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-lg font-medium text-gray-700">Name</FormLabel>
-                <FormControl>
-                  <Input placeholder="Your name" {...field} className="text-base p-4" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+         
 
           {/* Bio */}
           <FormField
@@ -96,20 +78,7 @@ export function ApplyForm({session}) {
             )}
           />
 
-          {/* Email */}
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-lg font-medium text-gray-700">Email</FormLabel>
-                <FormControl>
-                  <Input placeholder="example@example.com" type="email" {...field} className="text-base p-4" />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+         
 
           {/* Days */}
           {/* <FormField

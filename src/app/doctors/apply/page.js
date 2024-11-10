@@ -1,7 +1,9 @@
 import { ApplyForm } from "@/components/applyForm";
+import { auth } from "../../../../auth";
 
 
-export default function ApplyasDoc(){
+export default async function ApplyasDoc(){
+const session =await auth()
 return(
 <div className="container">
 
@@ -9,7 +11,7 @@ return(
 
 
 
-<ApplyForm />
+<ApplyForm session={session}/>
 </div>
 
 
