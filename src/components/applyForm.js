@@ -59,10 +59,7 @@ export function ApplyForm({session}) {
     // Convert comma-separated days string to array before submission
     // values.days = values.days[0].split(',').map(day => day.trim());
     
-    toast({
-      title: "Sorry , Your application cannot be submitted.",
-      description: "HELLO",
-    });
+    
       
       // form.reset()
       console.log(values);
