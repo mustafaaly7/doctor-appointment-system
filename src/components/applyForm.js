@@ -16,9 +16,6 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea" // for bio field
-import ImgUpload from "./uploadImg"
-import { useToast } from "@/hooks/use-toast"
-import { Toast } from "./ui/toast"
 
 // Define the form schema
 const formSchema = z.object({
