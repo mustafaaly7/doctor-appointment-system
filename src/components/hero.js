@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { auth } from "../../auth";
 
 
-export default function Hero() {
+export default async function Hero() {
+    const session = await auth()
     return (
 
         <div className="container">
@@ -52,7 +54,7 @@ export default function Hero() {
                                             Find the Best  Doctors
                                         </Button>
                                         </Link>
-                                        <Link href={'/doctors/apply'}>
+                                        <Link href={session ? '/doctors/apply' : "/signin"}>
                                         <Button className="mt-4 flex items-center rounded-lg  px-6 py-2 font-medium transition hover:translate-y-1 text-lg "
                                             variant="outline">
 

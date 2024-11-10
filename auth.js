@@ -34,6 +34,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           email: profile.email,
           picture: profile.picture,
         }
+        console.log("profile",profile);
+        
         const user = await RegisterUser(obj)
         return {user} // Do different verification for other providers that don't have `email_verified`
       }

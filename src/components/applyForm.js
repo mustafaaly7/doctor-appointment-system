@@ -34,7 +34,6 @@ const formSchema = z.object({
 
 // Main ApplyForm component
 export function ApplyForm({session}) {
-  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
