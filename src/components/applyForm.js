@@ -16,6 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea" // for bio field
+import AddRequest from "@/actions/request"
+import { useToast } from "@/hooks/use-toast"
 
 // Define the form schema
 const formSchema = z.object({
@@ -32,6 +34,8 @@ const formSchema = z.object({
 
 // Main ApplyForm component
 export function ApplyForm({session}) {
+  const { toast } = useToast()
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,13 +51,18 @@ export function ApplyForm({session}) {
     },
   })
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     values.user=session.user._id
-    
+    await AddRequest(values)
     
       
       // form.reset()
       console.log(values);
+      form.reset()
+      toast({
+        title: "Your Application has been Submitted",
+        description: "You'll be notified via Email in 3 working days ",
+      })
   }
 
   return (
