@@ -5,8 +5,8 @@ export async function POST(req) {
     await Connectdb()
     try {
         let obj = await req.json()
-        let newRequest = new RequestModel({ ...obj })
-        newRequest = await newRequest.save()
+        let newRequest = await new RequestModel({ ...obj });
+    newRequest = await newRequest.save()
         return Response.json({
             error: false,
             msg: "Request registered successfully",
