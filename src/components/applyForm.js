@@ -173,7 +173,7 @@ export function ApplyForm({session}) {
               <FormItem>
                 <FormLabel className="text-lg font-medium text-gray-700">Fees</FormLabel>
                 <FormControl>
-                  <Input placeholder="e.g., $100" {...field} className="text-base p-4" />
+                  <Input placeholder="e.g , $100" {...field} className="text-base p-4" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
