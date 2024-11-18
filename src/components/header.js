@@ -7,7 +7,6 @@ import Link from "next/link";
 export default async function Header() {
 
   const session = await auth();
-  console.log("session => ",session);
   
   return (
 

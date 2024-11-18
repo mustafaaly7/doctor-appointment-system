@@ -54,15 +54,25 @@ export function ApplyForm({session}) {
   const onSubmit = async (values) => {
     values.user=session.user._id
     
-    await AddRequest(values)
+   const response= await AddRequest(values)
+      console.log("response =>" ,response);
       
-      // form.reset()
+      if(response.error){
+        form.reset()
+        toast({
+            title: "Error",
+            description: response.msg,
+          })
+      }else{
+        form.reset()
+        toast({
+          title: "Your Application has been Submitted",
+          description: "You'll be notified via Email in 3 working days ",
+        })
+
+      }
+
       console.log(values);
-      form.reset()
-      toast({
-        title: "Your Application has been Submitted",
-        description: "You'll be notified via Email in 3 working days ",
-      })
   }
 
   return (
