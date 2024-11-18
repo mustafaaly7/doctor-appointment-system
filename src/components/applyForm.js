@@ -16,8 +16,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea" // for bio field
-import AddRequest from "@/actions/request"
 import { useToast } from "@/hooks/use-toast"
+import { AddRequest } from "@/actions/request"
 
 // Define the form schema
 const formSchema = z.object({
@@ -53,8 +53,8 @@ export function ApplyForm({session}) {
 
   const onSubmit = async (values) => {
     values.user=session.user._id
-    await AddRequest(values)
     
+    await AddRequest(values)
       
       // form.reset()
       console.log(values);
