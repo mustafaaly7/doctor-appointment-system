@@ -37,7 +37,7 @@ console.log("user requested before" , userRequestedbefore);
 }
 export async function GET(req) {
     await Connectdb()
-    let Requestsearch = await RequestModel.find()
+    let Requestsearch = await RequestModel.find().populate("user")
     return Response.json({
         error: "false",
         msg: "Request fetched successfully",

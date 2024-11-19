@@ -3,7 +3,7 @@ const { default: mongoose } = require("mongoose");
 const{Schema} = mongoose
 
 const RequestSchema = new Schema({
-    user : {type :mongoose.Types.ObjectId , ref : "Users"},
+  user: { type: mongoose.Types.ObjectId, ref: "Users" },
     status :{type : String , default :"pending" ,enum :["pending","accepted" ,"rejected"]} ,
     bio:String,
   location:String,
