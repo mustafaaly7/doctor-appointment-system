@@ -1,6 +1,8 @@
 
 "use server"
 
+import { revalidatePath } from "next/cache"
+
 export  async function AddRequest(data){
 let sendRequest = await fetch(`${process.env.BASE_URL}api/request`,{
     method:"POST",
@@ -15,3 +17,12 @@ export  async function GetRequest(){
     Getdata = Getdata.json()
     return Getdata
     }
+
+    export  async function UpdateRequest(id,status){
+        let Getdata = await fetch(`${process.env.BASE_URL}api/request`,{
+            method :"PUT",
+            body:JSON.stringify({id,status})
+        })
+        Getdata = Getdata.json()
+        revalidatePath("/admin/request")
+        }

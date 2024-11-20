@@ -44,5 +44,27 @@ export async function GET(req) {
         Request: Requestsearch,
     })
 }
-export async function PUT(req) { }
+export async function PUT(req) { 
+await Connectdb()
+
+const obj = await req.json()
+let{id,status} = obj
+
+try {
+    let updatedReq = await RequestModel.findByIdAndUpdate({_id : id},{status:status}).exec()
+    return Response.json({
+        error: "false",
+        msg: "Request Updated successfully",
+        Request: updatedReq,
+    },{status:200})
+
+} catch (error) {
+    return Response.json({
+        error: "true",
+        msg: "Request Didnt Updated successfully",
+    },{status:500})
+}
+
+
+}
 export async function DELETE(req) { }
