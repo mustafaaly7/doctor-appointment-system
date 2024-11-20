@@ -20,15 +20,15 @@ import {
 } from "@/components/ui/alert-dialog"
 import { UpdateRequest } from '@/actions/request'
 
-export default function RequestCard({ requests,  }) {
+export default function RequestCard({ requests, }) {
   const [isApproveDialogOpen, setIsApproveDialogOpen] = useState(false)
   const [isRejectDialogOpen, setIsRejectDialogOpen] = useState(false)
 
-  async function handleStatusChange  (status,id)  {
+  async function handleStatusChange(status, id) {
     // onStatusChange(requests.id, status)
-    await UpdateRequest(id,status)
-    console.log(status,id);
-    
+    await UpdateRequest(id, status)
+    console.log(status, id);
+
     setIsApproveDialogOpen(false)
     setIsRejectDialogOpen(false)
   }
@@ -78,47 +78,84 @@ export default function RequestCard({ requests,  }) {
       </CardContent>
       <CardFooter className="flex justify-between space-x-4">
         <DoctordetailSheet doctor={requests} />
-        <AlertDialog open={isRejectDialogOpen} onOpenChange={setIsRejectDialogOpen}>
-          <AlertDialogTrigger asChild>
-            <Button variant="outline" className="text-destructive hover:text-destructive hover:bg-destructive/10">
-              <X className="w-4 h-4 mr-2" />
-              Reject
-            </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you sure you want to reject this request?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action cannot be undone. The doctor will be notified of the rejection.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={() => handleStatusChange('rejected',requests._id)}>Confirm Reject</AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
-        <AlertDialog open={isApproveDialogOpen} onOpenChange={setIsApproveDialogOpen}>
-          <AlertDialogTrigger asChild>
-            <Button variant="outline" className="text-green-600 hover:text-green-600 hover:bg-green-100">
-              <Check className="w-4 h-4 mr-2" />
-              Approve
-            </Button>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you sure you want to approve this request?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action will add the doctor to your network. They will be notified of the approval.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction onClick={() => handleStatusChange('accepted',requests._id)}>Confirm Approve</AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        {requests.status === "accepted" ? (
+  <Button
+    variant="outline"
+    className="text-green-600 hover:text-green-600 hover:bg-green-100"
+  >
+    <Check className="w-4 h-4 mr-2" />
+    Approved
+  </Button>
+) : requests.status === "rejected" ? (
+  <Button
+    variant="outline"
+    className="text-destructive hover:text-destructive hover:bg-destructive/10"
+  >
+    <X className="w-4 h-4 mr-2" />
+    Rejected
+  </Button>
+) : (
+  <>
+    {/* Reject Dialog */}
+    <AlertDialog open={isRejectDialogOpen} onOpenChange={setIsRejectDialogOpen}>
+      <AlertDialogTrigger asChild>
+        <Button
+          variant="outline"
+          className="text-destructive hover:text-destructive hover:bg-destructive/10"
+        >
+          <X className="w-4 h-4 mr-2" />
+          Reject
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you sure you want to reject this request?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. The doctor will be notified of the rejection.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction
+            onClick={() => handleStatusChange("rejected", requests._id)}
+          >
+            Confirm Reject
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+
+    {/* Approve Dialog */}
+    <AlertDialog open={isApproveDialogOpen} onOpenChange={setIsApproveDialogOpen}>
+      <AlertDialogTrigger asChild>
+        <Button
+          variant="outline"
+          className="text-green-600 hover:text-green-600 hover:bg-green-100"
+        >
+          <Check className="w-4 h-4 mr-2" />
+          Approve
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you sure you want to approve this request?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action will add the doctor to your network. They will be notified of the approval.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction
+            onClick={() => handleStatusChange("accepted", requests._id)}
+          >
+            Confirm Approve
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  </>
+)}
+
       </CardFooter>
     </Card>
   )
